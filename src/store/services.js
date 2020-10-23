@@ -19,6 +19,28 @@ function api_v1_customtext_partial_update(action) {
     data: action.data
   })
 }
+function api_v1_hhjhj_list(action) {
+  return mmoctAPI.get(`/api/v1/hhjhj/`)
+}
+function api_v1_hhjhj_create(action) {
+  return mmoctAPI.post(`/api/v1/hhjhj/`, null, { data: action.data })
+}
+function api_v1_hhjhj_read(action) {
+  return mmoctAPI.get(`/api/v1/hhjhj/${action.id}/`)
+}
+function api_v1_hhjhj_update(action) {
+  return mmoctAPI.put(`/api/v1/hhjhj/${action.id}/`, null, {
+    data: action.data
+  })
+}
+function api_v1_hhjhj_partial_update(action) {
+  return mmoctAPI.patch(`/api/v1/hhjhj/${action.id}/`, null, {
+    data: action.data
+  })
+}
+function api_v1_hhjhj_delete(action) {
+  return mmoctAPI.delete(`/api/v1/hhjhj/${action.id}/`)
+}
 function api_v1_homepage_list(action) {
   return mmoctAPI.get(`/api/v1/homepage/`)
 }
@@ -87,6 +109,12 @@ export const apiService = {
   api_v1_customtext_read,
   api_v1_customtext_update,
   api_v1_customtext_partial_update,
+  api_v1_hhjhj_list,
+  api_v1_hhjhj_create,
+  api_v1_hhjhj_read,
+  api_v1_hhjhj_update,
+  api_v1_hhjhj_partial_update,
+  api_v1_hhjhj_delete,
   api_v1_homepage_list,
   api_v1_homepage_read,
   api_v1_homepage_update,
